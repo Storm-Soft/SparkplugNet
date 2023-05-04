@@ -354,7 +354,7 @@ public abstract partial class SparkplugApplicationBase<T> : SparkplugBase<T> whe
             var builder = new MqttClientOptionsBuilder()
                 .WithClientId(this.Options.ClientId)
                 .WithCredentials(this.Options.UserName, this.Options.Password)
-                .WithCleanSession(false)
+                .WithCleanStart(true)
                 .WithProtocolVersion(MqttProtocolVersion.V311);
 
             if (this.Options.UseTls)
